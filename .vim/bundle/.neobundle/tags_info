@@ -1,0 +1,9 @@
+neobundle.vim
+neocomplete.vim
+neoinclude.vim
+neomru.vim
+smartchr
+unite.vim
+vim-arduino-syntax
+vim-quickrun
+vimproc.vim

@@ -1,0 +1,23 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+"smartchr
+repo = 'kana/smartchr'
+
+[[plugins]]
+"ファイルオープンを便利に
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
+[[plugins]]
+"すぐ実行
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'sudar/vim-arduino-syntax'
+
+[[pligins]]
+repo = 'Shougo/neoinclude.vim'

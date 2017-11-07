@@ -1,0 +1,982 @@
+# この viminfo ファイルは Vim 8.0 によって生成されました.
+# 変更する際には十分注意してください!
+
+# Viminfo version
+|1,4
+
+# このファイルが書かれた時の 'encoding' の値
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 最後の 検索パターン:
+~MSle0~/\<data_\>
+
+# 最後に置換された文字列:
+$
+
+# コマンドライン 項目の履歴 (新しいものから古いものへ):
+:q
+|2,0,1510019021,,"q"
+:wq
+|2,0,1509856702,,"wq"
+:w
+|2,0,1509856622,,"w"
+:exitq
+|2,0,1509773663,,"exitq"
+:Unite file:../arm_gun_L
+|2,0,1509756540,,"Unite file:../arm_gun_L"
+:Unite file:../test_ir_receive/src/test_ir_receive.ino
+|2,0,1509755208,,"Unite file:../test_ir_receive/src/test_ir_receive.ino"
+:/Serial
+|2,0,1509754409,,"/Serial"
+:in
+|2,0,1509747628,,"in"
+:Unite file:arm_sord/src/test_arm.ino
+|2,0,1509747587,,"Unite file:arm_sord/src/test_arm.ino"
+:reg
+|2,0,1509747572,,"reg"
+:Unite file:../test_ir_receive/test_ir_receive.ino
+|2,0,1509746127,,"Unite file:../test_ir_receive/test_ir_receive.ino"
+:U:q
+|2,0,1509745863,,"U:q"
+:Unite file:../test_ir_attack/src/test_ir_attack.ino
+|2,0,1509685982,,"Unite file:../test_ir_attack/src/test_ir_attack.ino"
+:q!
+|2,0,1509684637,,"q!"
+:Unite file:/run/media/sato/3694-A5B0/test_ir_attack/test_ir_attack.ino
+|2,0,1509684027,,"Unite file:/run/media/sato/3694-A5B0/test_ir_attack/test_ir_attack.ino"
+:Q
+|2,0,1509683991,,"Q"
+:Unite dein
+|2,0,1509667993,,"Unite dein"
+:call dein#install()
+|2,0,1509667975,,"call dein#install()"
+:/ryker
+|2,0,1509667632,,"/ryker"
+:/syntax
+|2,0,1509667119,,"/syntax"
+:sp ../.vimrc
+|2,0,1509663691,,"sp ../.vimrc"
+:sp 
+|2,0,1509663654,,"sp "
+:Unite file:../test_ir_attack/test_ir_attack.ino
+|2,0,1509611404,,"Unite file:../test_ir_attack/test_ir_attack.ino"
+:Unite file:../test_ir_attack/../
+|2,0,1509611333,,"Unite file:../test_ir_attack/../"
+:Unite file:../motor/src/../
+|2,0,1509610910,,"Unite file:../motor/src/../"
+:Unite file:../nyan/test_ir_attack/test_ir_attack.ino
+|2,0,1509607656,,"Unite file:../nyan/test_ir_attack/test_ir_attack.ino"
+
+# 検索文字列 項目の履歴 (新しいものから古いものへ):
+? @$
+|2,1,1509843372,,"@$"
+? \<data_\>
+|2,1,1509771110,,"\\<data_\\>"
+? \<value\>
+|2,1,1509755108,,"\\<value\\>"
+? Serial
+|2,1,1509754409,,"Serial"
+??\a
+|2,1,1509747167,63,"\\a"
+? \<dir1_val\>
+|2,1,1509689980,,"\\<dir1_val\\>"
+? ryker
+|2,1,1509667632,,"ryker"
+? syntax
+|2,1,1509667119,,"syntax"
+
+# 式 項目の履歴 (新しいものから古いものへ):
+
+# 入力行 項目の履歴 (新しいものから古いものへ):
+
+# デバッグ行 項目の履歴 (新しいものから古いものへ):
+
+# レジスタ:
+"0	LINE	0
+	    digitalWrite(2, HIGH);
+|3,0,0,1,1,0,1509856625,"    digitalWrite(2, HIGH);"
+""1	LINE	0
+	  data_ = tmp;
+|3,1,1,1,1,0,1509856658,"  data_ = tmp;"
+"2	LINE	0
+	    tmp |= 0x03;
+|3,0,2,1,1,0,1509856657,"    tmp |= 0x03;"
+"3	LINE	0
+	    tmp |= 0x02;
+|3,0,3,1,1,0,1509856656,"    tmp |= 0x02;"
+"4	LINE	0
+	    tmp |= 0x01;
+|3,0,4,1,1,0,1509856654,"    tmp |= 0x01;"
+"5	CHAR	0
+	byte tmp = 0x00;
+	
+	  if (ir_flag0) {
+	    tmp |= 0x01;
+	    ir_flag0 = false;
+	  }
+	  if (ir_flag1) {
+	    tmp |= 0x04;
+	    ir_flag1 = false;
+	  }
+	
+	  static int s_iState_prev = HIGH;
+	  static unsigned long s_ulMicros_prev = 0;
+	
+	  int iState = digitalRead(PIN_IR2); // センサー値を読み取る
+	
+	  if (iState != s_iState_prev) {
+	    s_iState_prev = iState;
+	    unsigned long ulMicros = micros();
+	    auto how = ulMicros - s_ulMicros_prev;
+	    if (how >= 6500 && how <= 7000) {
+	      tmp |= 0x02;
+	      // Serial.println("HIT2");
+	    }
+	    s_ulMicros_prev = ulMicros;
+	  }
+|3,0,5,0,26,0,1509856620,"byte tmp = 0x00;","","  if (ir_flag0) {","    tmp |= 0x01;","    ir_flag0 = false;","  }","  if (ir_flag1) {","    tmp |= 0x04;","    ir_flag1 = false;","  }","","  static int s_iState_prev = HIGH;","  static unsigned long s_ulMicros_prev = 0;","","  int iState = digitalRead(PIN_IR2); // センサー値を読み取る","","  if (iState != s_iState_prev) {","    s_iState_prev = iState;","    unsigned long ulMicros = micros();",>44
+|<"    auto how = ulMicros - s_ulMicros_prev;","    if (how >= 6500 && how <= 7000) {","      tmp |= 0x02;","      // Serial.println(\"HIT2\");","    }","    s_ulMicros_prev = ulMicros;","  }"
+"6	LINE	0
+	  digitalWrite(2, HIGH);
+|3,0,6,1,1,0,1509856613,"  digitalWrite(2, HIGH);"
+"7	LINE	0
+	    digitalWrite(5, HIGH);
+|3,0,7,1,1,0,1509855775,"    digitalWrite(5, HIGH);"
+"8	LINE	0
+	    digitalWrite(6, HIGH);
+|3,0,8,1,1,0,1509855772,"    digitalWrite(6, HIGH);"
+"9	LINE	0
+	      digitalWrite(7, HIGH);
+|3,0,9,1,1,0,1509855768,"      digitalWrite(7, HIGH);"
+"-	CHAR	0
+	3
+|3,0,36,0,1,0,1509856118,"3"
+
+# ファイルマーク:
+'M  84  4  ~/arduino/drafts/products/hub/src/motor.ino
+|4,77,84,4,1509746163,"~/arduino/drafts/products/hub/src/motor.ino"
+'0  215  0  ~/.viminfo
+|4,48,215,0,1510019021,"~/.viminfo"
+'1  2  1  ~/.gitconfig
+|4,49,2,1,1510018952,"~/.gitconfig"
+'2  95  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,50,95,2,1509856702,"~/arduino/drafts/products/hub/src/hub.ino"
+'3  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,51,103,4,1509856677,"~/arduino/drafts/products/hub/src/hub.ino"
+'4  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,52,103,4,1509856677,"~/arduino/drafts/products/hub/src/hub.ino"
+'5  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,53,112,0,1509856659,"~/arduino/drafts/products/hub/src/hub.ino"
+'6  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,54,112,0,1509856659,"~/arduino/drafts/products/hub/src/hub.ino"
+'7  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,55,112,0,1509856659,"~/arduino/drafts/products/hub/src/hub.ino"
+'8  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,56,112,0,1509856659,"~/arduino/drafts/products/hub/src/hub.ino"
+'9  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,57,67,2,1509856634,"~/arduino/drafts/products/hub/src/hub.ino"
+
+# ジャンプリスト (新しいものが先):
+-'  215  0  ~/.viminfo
+|4,39,215,0,1510019021,"~/.viminfo"
+-'  987  1  ~/.viminfo
+|4,39,987,1,1510019004,"~/.viminfo"
+-'  943  1  ~/.viminfo
+|4,39,943,1,1510019003,"~/.viminfo"
+-'  23  0  ~/.viminfo
+|4,39,23,0,1510019000,"~/.viminfo"
+-'  1  0  ~/.viminfo
+|4,39,1,0,1510018987,"~/.viminfo"
+-'  2  1  ~/.gitconfig
+|4,39,2,1,1510018952,"~/.gitconfig"
+-'  2  1  ~/.gitconfig
+|4,39,2,1,1510018952,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1510018946,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1510018946,"~/.gitconfig"
+-'  95  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,95,2,1509856702,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  95  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,95,2,1509856702,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  95  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,95,2,1509856702,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  95  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,95,2,1509856702,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,103,4,1509856695,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,103,4,1509856695,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,103,4,1509856695,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,103,4,1509856695,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,103,4,1509856677,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,103,4,1509856677,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,103,4,1509856677,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  103  4  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,103,4,1509856677,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856667,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856667,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856667,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856667,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856667,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856667,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856667,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856667,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856659,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856659,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856659,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  112  0  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,112,0,1509856659,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856645,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856634,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856634,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856634,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  67  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,67,2,1509856634,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  96  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,96,2,1509856611,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  6  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,6,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  6  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,6,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  118  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,118,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  6  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,6,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  6  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,6,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  118  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,118,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  6  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,6,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  6  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,6,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  118  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,118,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  6  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,6,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  6  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,6,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  2  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,2,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  118  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,118,2,1509856556,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+-'  81  2  ~/arduino/drafts/products/hub/src/hub.ino
+|4,39,81,2,1509856527,"~/arduino/drafts/products/hub/src/hub.ino"
+
+# ファイル内マークの履歴 (新しいものから古いもの):
+
+> ~/.viminfo
+	*	1510019019	0
+	"	215	0
+
+> ~/.gitconfig
+	*	1510018950	0
+	"	2	1
+
+> ~/arduino/drafts/products/hub/src/hub.ino
+	*	1509856699	0
+	"	95	2
+	^	91	4
+	.	1	0
+	+	31	3
+	+	1	0
+	+	17	3
+	+	18	3
+	+	57	0
+	+	1	0
+	+	90	2
+	+	30	2
+	+	31	2
+	+	1	0
+	+	29	12
+	+	1	0
+	+	90	2
+	+	97	14
+	+	104	14
+	+	110	14
+	+	84	0
+	+	38	0
+	+	26	2
+	+	32	3
+	+	29	3
+	+	34	3
+	+	29	9
+	+	1	0
+	+	17	0
+	+	1	0
+	+	31	0
+	+	1	0
+	+	29	3
+	+	28	13
+	+	1	0
+	+	28	12
+	+	1	0
+	+	79	0
+	+	80	0
+	+	81	0
+	+	82	0
+	+	80	10
+	+	81	10
+	+	82	10
+	+	100	0
+	+	98	24
+	+	104	0
+	+	110	0
+	+	104	0
+	+	110	0
+	+	1	0
+	+	90	4
+	+	90	2
+	+	1	0
+	+	18	0
+	+	17	0
+	+	37	0
+	+	1	0
+	+	108	14
+	+	102	14
+	+	96	14
+	+	1	0
+	+	97	17
+	+	103	17
+	+	109	17
+	+	1	0
+	+	102	14
+	+	1	0
+	+	101	2
+	+	1	0
+	+	102	14
+	+	1	0
+	+	90	2
+	+	1	0
+	+	95	2
+	+	101	3
+	+	1	0
+	+	96	14
+	+	1	0
+	+	96	14
+	+	100	0
+	+	1	0
+	+	79	0
+	+	80	0
+	+	81	0
+	+	1	0
+	+	100	0
+	+	1	0
+	+	94	0
+	+	1	0
+	+	91	0
+	+	92	0
+	+	93	0
+	+	92	0
+	+	93	0
+	+	1	0
+	+	97	0
+	+	104	0
+	+	110	0
+	+	112	0
+	+	1	0
+	+	92	0
+	+	1	0
+
+> ~/arduino/drafts/products/arm_gun_R/src/test_arm.ino
+	*	1509848284	0
+	"	144	2
+	^	23	0
+	.	1	0
+	+	21	0
+	+	23	0
+	+	134	0
+	+	115	0
+	+	148	0
+	+	141	0
+	+	1	0
+	+	141	0
+	+	137	0
+	+	1	0
+
+> ~/arduino/drafts/products/motor/src/motor.ino
+	*	1509847675	0
+	"	112	2
+	^	39	8
+	.	1	0
+	+	39	20
+	+	40	0
+	+	43	0
+	+	40	30
+	+	41	0
+	+	43	0
+	+	42	0
+	+	41	0
+	+	1	0
+	+	108	0
+	+	111	0
+	+	106	0
+	+	115	0
+	+	117	0
+	+	118	0
+	+	115	0
+	+	1	0
+	+	115	0
+	+	118	0
+	+	113	0
+	+	111	0
+	+	106	0
+	+	109	0
+	+	113	24
+	+	118	24
+	+	117	24
+	+	118	0
+	+	116	0
+	+	1	0
+	+	105	3
+	+	108	3
+	+	111	3
+	+	112	3
+	+	115	3
+	+	118	3
+	+	110	0
+	+	117	0
+	+	1	0
+	+	116	2
+	+	117	2
+	+	114	0
+	+	109	2
+	+	110	2
+	+	107	0
+	+	1	0
+	+	106	2
+	+	105	2
+	+	107	2
+	+	108	2
+	+	111	2
+	+	112	2
+	+	113	2
+	+	114	2
+	+	115	2
+	+	118	2
+	+	1	0
+	+	105	0
+	+	105	24
+	+	1	0
+	+	105	25
+	+	1	0
+	+	58	0
+	+	59	0
+	+	1	0
+	+	97	0
+	+	99	0
+	+	1	0
+	+	104	0
+	+	97	28
+	+	98	27
+	+	1	0
+	+	101	0
+	+	102	0
+	+	1	0
+	+	98	0
+	+	103	2
+	+	1	0
+	+	104	0
+	+	97	2
+	+	1	0
+	+	98	0
+	+	103	2
+	+	1	0
+	+	105	0
+	+	1	0
+	+	105	0
+	+	112	0
+	+	1	0
+
+> ~/arduino/drafts/products/arm_sord/src/test_arm.ino
+	*	1509845941	0
+	"	133	2
+	^	133	16
+	.	1	0
+	+	65	0
+	+	1	0
+	+	61	0
+	+	65	0
+	+	1	0
+	+	124	2
+	+	1	0
+	+	124	0
+	+	111	0
+	+	1	0
+	+	111	33
+	+	1	0
+	+	91	3
+	+	90	3
+	+	125	0
+	+	119	0
+	+	1	0
+	+	61	0
+	+	65	0
+	+	1	0
+	+	61	0
+	+	65	0
+	+	1	0
+	+	134	0
+	+	1	0
+	+	132	5
+	+	133	0
+	+	26	0
+	+	1	0
+	+	111	35
+	+	1	0
+	+	134	0
+	+	1	0
+	+	117	0
+	+	1	0
+	+	112	0
+	+	1	0
+	+	27	19
+	+	29	50
+	+	112	51
+	+	111	3
+	+	113	0
+	+	114	0
+	+	113	0
+	+	114	0
+	+	112	48
+	+	113	45
+	+	1	0
+	+	115	0
+	+	116	0
+	+	115	0
+	+	116	47
+	+	1	0
+	+	120	3
+	+	1	0
+	+	132	0
+	+	132	3
+	+	133	0
+	+	132	0
+	+	132	18
+	+	132	13
+	+	1	0
+	+	132	0
+	+	131	0
+	+	132	0
+	+	128	0
+	+	1	0
+	+	128	14
+	+	129	14
+	+	130	13
+	+	1	0
+	+	128	0
+	+	132	2
+	+	1	0
+	+	134	11
+	+	1	0
+	+	133	0
+	+	127	2
+	+	1	0
+	+	128	0
+	+	132	2
+	+	1	0
+	+	133	0
+	+	62	0
+	+	68	0
+	+	66	0
+	+	1	0
+	+	66	0
+	+	67	0
+	+	1	0
+	+	134	0
+	+	1	0
+	+	134	0
+	+	82	0
+	+	1	0
+	+	132	12
+	+	1	0
+	+	132	15
+	+	133	15
+	+	1	0
+
+> ~/arduino/drafts/products/arm_shield/src/test_arm.ino
+	*	1509842741	0
+	"	97	4
+	^	97	15
+	.	1	0
+	+	38	0
+	+	54	0
+	+	28	20
+	+	38	59
+	+	98	0
+	+	99	0
+	+	93	0
+	+	1	0
+	+	96	15
+	+	97	14
+	+	93	15
+	+	94	16
+	+	1	0
+	+	96	15
+	+	97	15
+	+	1	0
+	+	96	14
+	+	97	14
+	+	93	15
+	+	94	15
+	+	1	0
+	+	93	0
+	+	96	14
+	+	97	14
+	+	1	0
+
+> ~/arduino/drafts/products/arm_gun_L/src/test_arm.ino
+	*	1509788040	0
+	"	137	2
+	^	147	4
+	.	1	0
+	+	57	0
+	+	142	30
+	+	1	0
+	+	15	0
+	+	18	0
+	+	17	0
+	+	16	0
+	+	116	2
+	+	117	0
+	+	118	12
+	+	117	0
+	+	118	0
+	+	117	21
+	+	118	16
+	+	119	0
+	+	118	18
+	+	136	0
+	+	135	0
+	+	144	0
+	+	1	0
+	+	145	3
+	+	147	3
+	+	1	0
+	+	141	0
+	+	137	0
+	+	1	0
+
+> ~/arduino/drafts/products/arm_shield/[unite] - default
+	*	1509756542	0
+	"	2	0
+	.	2	0
+	+	2	0
+
+> ~/arduino/drafts/products/arm_shield/[unite] - default-1
+	*	1509756542	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/arduino/drafts/products/test_ir_receive/src/test_ir_receive.ino
+	*	1509755364	0
+	"	9	0
+	.	1	0
+	+	1	0
+
+> ~/arduino/drafts/products/hub/[unite] - default
+	*	1509755208	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/arduino/drafts/products/arm/src/test_arm.ino
+	*	1509754103	0
+	"	90	0
+
+> ~/arduino/drafts/products/[unite] - default
+	*	1509747587	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/arduino/drafts/products/hub/src/motor.ino
+	*	1509746835	0
+	"	79	2
+	^	23	18
+	.	1	0
+	+	30	0
+	+	29	0
+	+	30	0
+	+	10	0
+	+	69	0
+	+	84	0
+	+	1	0
+	+	84	5
+	+	1	0
+	+	99	0
+	+	85	0
+	+	1	0
+	+	20	23
+	+	21	0
+	+	20	0
+	+	16	9
+	+	17	13
+	+	16	7
+	+	15	0
+	+	28	0
+	+	29	0
+	+	1	0
+	+	34	17
+	+	45	0
+	+	1	0
+	+	73	17
+	+	87	0
+	+	83	0
+	+	76	15
+	+	80	14
+	+	98	0
+	+	92	0
+	+	86	14
+	+	92	13
+	+	98	13
+	+	101	22
+	+	24	50
+	+	26	0
+	+	24	9
+	+	25	0
+	+	24	24
+	+	25	29
+	+	77	20
+	+	81	0
+	+	1	0
+	+	25	12
+	+	23	17
+	+	83	0
+	+	1	0
+	+	68	0
+	+	12	0
+	+	1	0
+
+> ~/arduino/drafts/products/test_ir_receive/test_ir_receive.ino
+	*	1509746576	0
+	"	54	2
+	.	1	0
+	+	69	3
+	+	1	1
+	+	54	0
+	+	1	0
+
+> ~/arduino/drafts/products/test_ir_receive/test_ir_attack/test_ir_attack.ino
+	*	1509745637	0
+	"	56	0
+
+> ~/arduino/drafts/products/arm_gun/src/test_arm.ino
+	*	1509694725	0
+	"	78	4
+	^	54	61
+	.	1	0
+	+	1	3
+	+	1	0
+	+	94	22
+	+	94	0
+	+	94	5
+	+	94	0
+	+	94	5
+	+	94	0
+	+	37	19
+	+	1	0
+	+	92	0
+	+	116	0
+	+	94	0
+	+	1	0
+	+	91	0
+	+	52	0
+	+	119	0
+	+	1	0
+	+	132	2
+	+	1	0
+	+	94	0
+	+	23	1
+	+	24	0
+	+	48	0
+	+	7	0
+	+	15	0
+	+	1	0
+	+	11	0
+	+	23	0
+	+	47	0
+	+	1	2
+	+	136	2
+	+	135	2
+	+	120	2
+	+	133	2
+	+	1	1
+	+	7	0
+	+	1	0
+	+	5	0
+	+	6	0
+	+	1	0
+	+	1	23
+	+	1	0
+	+	1	15
+	+	1	26
+	+	1	0
+	+	1	10
+	+	1	0
+	+	1	10
+	+	1	1
+	+	1	0
+	+	1	3
+	+	1	0
+	+	1	2
+	+	1	0
+	+	1	3
+	+	1	0
+	+	13	1
+	+	13	2
+	+	39	0
+	+	39	3
+	+	40	0
+	+	134	4
+	+	134	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	10	0
+	+	1	0
+	+	17	0
+	+	12	22
+	+	1	0
+	+	45	0
+	+	1	0
+	+	14	0
+	+	137	2
+	+	135	2
+	+	1	0
+	+	54	60
+	+	1	0
+
+> ~/arduino/drafts/products/test_ir_attack/src/test_ir_attack.ino
+	*	1509685998	0
+	"	5	0
+	.	1	0
+	+	24	0
+	+	25	0
+	+	24	0
+	+	1	0
+
+> ~/arduino/drafts/products/arm_gun/[unite] - default
+	*	1509685982	0
+	"	1	0
+	.	1	0
+	+	1	0
