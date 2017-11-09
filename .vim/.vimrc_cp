@@ -111,14 +111,14 @@ if &compatible
 	set nocompatible
 endif
 
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+set runtimepath+=~/.dotfile/.vim/bundle/neobundle.vim/
 
 call neobundle#begin(expand('~/.dotfile/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 "smartchr
-NeoBundle 'smartchr'
+NeoBundle 'kana/vim-smartchr'
 inoremap <buffer> <expr> = smartchr#loop('=', ' == ', ' = ')
 inoremap <buffer> <expr> + smartchr#loop('+','++',' + ')
 inoremap <buffer> <expr> - smartchr#loop('-','--',' - ')
@@ -130,8 +130,10 @@ inoremap <buffer> <expr> , smartchr#loop(',', ' , ')
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 
-NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimproc'
 
+NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 let g:neocomplete#enable_at_startup = 1
 
@@ -143,7 +145,8 @@ let g:neocomplete#force_omni_input_patterns.c =
       \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
 let g:neocomplete#force_omni_input_patterns.cpp =
       \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-NeoBundle 'Shougo/neoinclude.vim'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 
 "すぐ実行
 NeoBundle 'thinca/vim-quickrun'

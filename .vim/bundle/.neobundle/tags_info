@@ -2,8 +2,11 @@ neobundle.vim
 neocomplete.vim
 neoinclude.vim
 neomru.vim
-smartchr
+neosnippet
+neosnippet-snippets
 unite.vim
 vim-arduino-syntax
 vim-quickrun
-vimproc.vim
+vim-smartchr
+vimproc
+vimshell
