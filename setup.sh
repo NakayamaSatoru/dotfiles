@@ -1,3 +1,4 @@
+#!/bin/sh
 sudo dnf upgrade -y
 bash ./setinstall.sh
 bash ./setlink.sh

@@ -1,3 +1,4 @@
+#!/bin/sh
 unlink ~/.vimrc
 unlink ~/.bashrc
 unlink ~/.bash_profile
