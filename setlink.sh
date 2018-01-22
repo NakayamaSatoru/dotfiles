@@ -1,4 +1,5 @@
 #!/bin/sh
+git clone https://github.com/Shougo/neobundle.vim ~/.dotfile/.vim/bundle/neobundle.vim
 mv ~/.vim ~/.vim_cp
 mv ~/.vimrc ~/.vimrc_cp
 mv ~/.bashrc ~/.bashrc_cp
