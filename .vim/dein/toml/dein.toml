@@ -1,0 +1,21 @@
+# Required:
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# 整形
+[[pligins]]
+repo = 'junegunn/vim-easy-align'
+
+# cc関係
+[[pligins]]
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+hook_post_update = '''
+  let cmd = 'make'
+  let g:dein#plugin.build = cmd
+'''
+
+[[pligins]]
+repo = 'Shougo/neoinclude.vim'
