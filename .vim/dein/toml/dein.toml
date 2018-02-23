@@ -2,20 +2,17 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# 整形
-[[pligins]]
-repo = 'junegunn/vim-easy-align'
-
-# cc関係
-[[pligins]]
-repo = 'Shougo/neocomplete.vim'
-
+# neocomplete
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-hook_post_update = '''
-  let cmd = 'make'
-  let g:dein#plugin.build = cmd
-'''
+repo = 'Shougo/neocomplete.vim'
+depends = ['Shougo/neoinclude','Shougo/neosnippet','Shougo/neosnippet-snippets']
 
-[[pligins]]
+# neocomplete
+[[plugins]]
 repo = 'Shougo/neoinclude.vim'
+
+# snippet
+[[plugins]]
+repo = 'Shougo/neosnippet'
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
