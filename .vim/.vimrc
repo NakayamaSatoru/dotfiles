@@ -37,16 +37,6 @@ call dein#install()
 
 " }}}
 
-nnoremap s <Nop>
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-nnoremap sl <C-w>l
-nnoremap sh <C-w>h
-nnoremap sJ <C-w>J
-nnoremap sK <C-w>K
-nnoremap sL <C-w>L
-nnoremap sH <C-w>H
-
 " 'clang-format' {{{
 function! s:clang_format()
   let now_line = line(".")
@@ -59,10 +49,6 @@ function! s:clang_format()
       autocmd BufWrite,FileWritePre,FileAppendPre *.{ino,cc,h,cpp,hpp} call s:clang_format()
       augroup END
       endif
-" }}}
-
-" 'Shougo/deoplete' {{{
-"  let g:deoplete#enable_at_startup = 1
 " }}}
 
 " 'Shougo/neocomplete.vim' {{{
@@ -88,9 +74,7 @@ imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "<Plug>(neosni
 " 'setting' {{{
 "文字コードをUFT-8に設定
 set encoding=utf-8
-scriptencoding utf-8
 set fileencoding=utf-8 
-" 読み込み時の文字コードの自動判別
 set fileencodings=utf-8
 " 改行コードの自動判別
 set fileformats=unix 
@@ -157,3 +141,35 @@ set autoindent
 syntax on
 " }}}
 
+" 'powerline' {{{
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 1
+let g:airline_theme = 'papercolor'
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+" }}}
+
+" '操作系' {{{
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sJ <C-w>J
+nnoremap sK <C-w>K
+nnoremap sL <C-w>L
+nnoremap sH <C-w>H
+" }}}
