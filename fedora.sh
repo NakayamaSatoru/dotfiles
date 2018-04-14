@@ -30,3 +30,9 @@ cd gnome-terminal-colors-dracula
 # plugin
 fisher install z
 fisher install 0rax/fish-bd
+sudo wget "https://github.com/peco/peco/releases/download/v0.5.3/peco_linux_386.tar.gz"
+sudo tar xzvf peco_linux_386.tar.gz
+cd peco_linux_386
+sudo chmod +x peco
+sudo cp peco /usr/local/bin
+fisher oh-my-fish/plugin-peco
