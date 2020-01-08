@@ -1,0 +1,21 @@
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+on_ft = ['python','py']
+hook_source = '''
+'''
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = ['python','py']
+hook_source ='''
+    source ~/.config/nvim/plugins/jedi-vim.vim
+'''
+
+[[plugins]]
+repo = 'Vimjas/vim-python-pep8-indent'
+on_ft = ['python','py']
+
+[[plugins]]
+repo = 'jmcantrell/vim-virtualenv'
+on_ft = ['python','py']
+
