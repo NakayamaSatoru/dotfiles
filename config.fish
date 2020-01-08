@@ -1,14 +1,16 @@
 set -x XDG_CONFIG_HOME $HOME/.config
 
-set -x GOPATH /usr/local/go
+set -x GOROOT /usr/local/go 
+set -x GOPATH $HOME/go
 set -x PYENV_ROOT $HOME/.pyenv
-set -x JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk
-set -x PATH $PATH $PYENV_ROOT/bin $GOPATH/bin $JAVA_HOME/bin
+#set -x JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk
+set -x PATH $PATH $PYENV_ROOT/bin $GOPATH/bin
+#set -x PATH $PATH $PYENV_ROOT/bin $GOPATH/bin $JAVA_HOME/bin
 
 eval (pyenv init - | source)
 eval (pyenv virtualenv-init - | source)
 
-alias vim='nvim'
+#alias vim='nvim'
 
 set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
